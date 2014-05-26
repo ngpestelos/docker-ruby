@@ -13,3 +13,5 @@ RUN apt-get -y upgrade
 RUN apt-get -y install ruby2.1 build-essential curl libcurl4-openssl-dev ca-certificates git vim tmux libsqlite3-dev nodejs
 
 RUN gem install bundler
+RUN apt-get -y install ruby2.1-dev
+RUN gem install bcrypt
