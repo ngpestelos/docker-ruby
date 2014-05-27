@@ -35,7 +35,7 @@ RUN gem install rails -v 4.1.1 &&\
     gem install sqlite3 -v 1.3.9
 
 RUN gem install devise -v 3.2.4 &&\
-    gem install foundation -v 5.2.2 &&\
+    gem install foundation-rails -v 5.2.2.0 &&\
     gem install paper_trail -v 3.0.1
 
 RUN gem install cucumber -v 1.3.14 &&\
