@@ -41,3 +41,5 @@ RUN gem install devise -v 3.2.4 &&\
 RUN gem install cucumber -v 1.3.14 &&\
     gem install pry -v 0.9.12.6 &&\
     gem install capybara -v 2.2.1 &&\
+    gem install minitest -v 5.3.3 &&\
+    gem install rspec-rails -v 2.14.2
