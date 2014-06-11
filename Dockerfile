@@ -56,3 +56,13 @@ RUN gem install unicorn --version '~> 4.8' &&\
     gem install uglifier --version '~> 1.3' &&\
     gem install coffee-rails --version '~> 4.0' &&\
     gem install jquery-rails --version '~> 3.1'
+
+RUN mkdir /data
+
+ADD nginx.conf /etc/nginx/nginx.conf
+ADD nginx.default.conf /etc/nginx/sites-available/default
+RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ADD start_nginx /data/
+RUN chown root:root /data/start_nginx
+RUN chmod +x /data/start_nginx
+RUN mkdir -p /etc/service/nginx && ln -s /data/start_nginx /etc/service/nginx/run
