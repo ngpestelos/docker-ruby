@@ -58,7 +58,8 @@ RUN gem install unicorn --version '~> 4.8' &&\
     gem install jquery-rails --version '~> 3.1' &&\
     gem install turbolinks --version '~> 2.2' &&\
     gem install therubyracer --version '~> 0.12' &&\
-    gem install sdoc --version '~> 0.4'
+    gem install sdoc --version '~> 0.4' &&\
+    gem install spring --version '~> 1.0'
 
 RUN mkdir /data
 
