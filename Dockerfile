@@ -59,16 +59,14 @@ RUN gem install unicorn --version '~> 4.8' &&\
     gem install turbolinks --version '~> 2.2' &&\
     gem install therubyracer --version '~> 0.12' &&\
     gem install sdoc --version '~> 0.4' &&\
-    gem install spring --version '~> 1.0'
+    gem install spring --version '~> 1.0' &&\
+    gem install modernizr-rails --version '~> 2.7'
 
 RUN mkdir /data
 
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD nginx.default.conf /etc/nginx/sites-available/default
-RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 ADD start_nginx /data/
 RUN chown root:root /data/start_nginx
 RUN chmod +x /data/start_nginx
 RUN mkdir -p /etc/service/nginx && ln -s /data/start_nginx /etc/service/nginx/run
 
-RUN gem install modernizr-rails --version '~> 2.0'
