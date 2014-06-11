@@ -49,3 +49,10 @@ RUN apt-add-repository ppa:nginx/stable && \
     apt-get -y install nginx
 
 RUN apt-get -y install syslog-ng screen
+
+RUN gem install unicorn --version '~> 4.8' &&\
+    gem install jbuilder --version '~> 2.0' &&\
+    gem install sass-rails --version '~> 4.0' &&\
+    gem install uglifier --version '~> 1.3' &&\
+    gem install coffee-rails --version '~> 4.0' &&\
+    gem install jquery-rails --version '~> 3.1'
