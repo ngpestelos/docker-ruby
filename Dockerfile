@@ -43,3 +43,7 @@ RUN gem install cucumber -v 1.3.14 &&\
     gem install capybara -v 2.2.1 &&\
     gem install minitest -v 5.3.3 &&\
     gem install rspec-rails -v 2.14.2
+
+RUN apt-add-repository ppa:nginx/stable && \
+    apt-get -y update && \
+    apt-get -y install nginx
