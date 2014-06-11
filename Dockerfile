@@ -56,7 +56,8 @@ RUN gem install unicorn --version '~> 4.8' &&\
     gem install uglifier --version '~> 1.3' &&\
     gem install coffee-rails --version '~> 4.0' &&\
     gem install jquery-rails --version '~> 3.1' &&\
-    gem install turbolinks --version '~> 2.2'
+    gem install turbolinks --version '~> 2.2' &&\
+    gem install therubyracer --version '~> 0.12'
 
 RUN mkdir /data
 
