@@ -74,3 +74,8 @@ RUN apt-get -y install redis-server
 
 RUN gem install redis --version '~> 3.0' &&\
     gem install resque --version '~> 1.25'
+
+ADD start_redis /data/
+RUN chown root:root /data/start_redis
+RUN chmod +x /data/start_redis
+RUN mkdir -p /etc/service/redis && ln -s /data/start_redis /etc/service/redis/run
