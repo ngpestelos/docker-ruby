@@ -47,3 +47,5 @@ RUN gem install cucumber -v 1.3.14 &&\
 RUN apt-add-repository ppa:nginx/stable && \
     apt-get -y update && \
     apt-get -y install nginx
+
+RUN apt-get -y install syslog-ng screen
