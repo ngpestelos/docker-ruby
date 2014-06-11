@@ -70,3 +70,7 @@ RUN chown root:root /data/start_nginx
 RUN chmod +x /data/start_nginx
 RUN mkdir -p /etc/service/nginx && ln -s /data/start_nginx /etc/service/nginx/run
 
+RUN apt-get -y install redis-server
+
+RUN gem install redis --version '~> 3.0' &&\
+    gem install resque --version '~> 1.25'
