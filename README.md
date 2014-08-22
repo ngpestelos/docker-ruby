@@ -1,9 +1,16 @@
 docker-ruby
 ===========
 
-Uses [phusion-baseimage](https://github.com/phusion/baseimage-docker) as its base image, it builds a
-Docker image with the [Brightbox PPA](http://brightbox.com/docs/ruby/ubuntu/).
+Base image for Ruby 
 
-### See Also
+### Features
 
-* [discourse_docker](https://github.com/discourse/discourse_docker)
+* runs ruby as a non-root user (deploy)
+* installs commonly-used gems (e.g. nokogiri)
+
+### Usage
+
+    $ docker build .
+    $ docker run -it --rm <image-id> /bin/bash
+    $ su deploy
+    $ ruby --version
