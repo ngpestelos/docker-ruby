@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.2
+
+* add gem (rails 4.1.5)
+
 ### 0.1
 
 * install ubuntu dependencies

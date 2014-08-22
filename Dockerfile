@@ -37,4 +37,5 @@ RUN su deploy -c 'source /home/deploy/.bashrc &&\
  gem install bundler --version 1.7.0 &&\
  gem install json --version 1.8.1 &&\
  gem install nokogiri --version 1.6.3.1 &&\
- gem install therubyracer --version 0.12.1'
+ gem install therubyracer --version 0.12.1' &&\
+ gem install rails --version 4.1.5
