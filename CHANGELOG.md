@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.4
+
+* use phusion-baseimage 0.9.13
+* install python
+* remove gems
+
 ### 0.3
 
 * add /var/lib/gems/2.1.0 to gem search path

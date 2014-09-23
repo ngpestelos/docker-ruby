@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.12
+FROM phusion/baseimage:0.9.13
 
 MAINTAINER Nestor G. Pestelos, Jr. "nestor@aelogica.com"
 
@@ -15,7 +15,7 @@ RUN apt-get -y install autoconf automake \
   libpq-dev libreadline6 libreadline6-dev \
   libsqlite3-dev libssl-dev libtool libv8-dev \
   libxml2-dev libxslt1-dev libyaml-dev \
-  openssl pkg-config \
+  openssl pkg-config python \
   screen software-properties-common \
   sqlite3 sudo syslog-ng unzip vim wget
 
@@ -31,11 +31,3 @@ ADD bashrc /home/deploy/.bashrc
 ADD bashrc /root/.bashrc
 
 RUN mkdir -p /home/deploy/.gem && chown -R deploy:deploy /home/deploy
-
-RUN su deploy -c 'source /home/deploy/.bashrc &&\
- gem install bcrypt --version 3.1.7 &&\
- gem install bundler --version 1.7.0 &&\
- gem install json --version 1.8.1 &&\
- gem install nokogiri --version 1.6.3.1 &&\
- gem install therubyracer --version 0.12.1' &&\
- gem install rails --version 4.1.5
